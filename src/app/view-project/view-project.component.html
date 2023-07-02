@@ -1,0 +1,22 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-6 offset-md-3">
+		<h3>{{project.title}}</h3>
+
+		<div class="col-md-5 coloana-t"><h4>Descrierea:</h4></div>
+		<div class="data-from-db">{{project.description}}</div>
+
+		<div class="col-md-5 coloana-t"><h4>Organizator:</h4></div>
+		<div class="data-from-db">{{project.organizer}}</div>
+
+		<div class="col-md-5 coloana-t"><h4>Perioada:</h4></div>
+		<div class="data-from-db">{{project.period}}</div>
+
+
+		<div class="col-md-5 coloana-t"><h4>Locul:</h4></div>
+	
+		<div class="data-from-db">{{project.place}}</div>
+		<br><br>
+
+		<button class="btn btn-success btn-trainers" (click)="goToTrainesOf(project.id)">Traineri</button>
+		<button class="btn btn-success btn-participants" (click)="goToParticipantsOf(project.id)">Participanti</button>
+</div>

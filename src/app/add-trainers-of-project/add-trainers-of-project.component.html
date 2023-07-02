@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-8 offset-md-2">
+	<h2 class="text-center">Adauga traineri pentru {{project.title}}</h2>
+	<button class="btn btn-success" (click)="goBack()">Inapoi</button>
+	<table class="table table-striped">
+		<thead>
+	
+			<tr>
+				<th>Nume</th>
+				<th>Email</th>
+				<th>Telefon</th>
+				<th>Acțiuni</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let trainer of trainers">
+				<td>{{trainer.name}}</td>
+				<td>{{trainer.email}}</td>
+				<td>{{trainer.phoneNumber}}</td>
+				<td>
+					<button class="btn btn-success" (click)="addToProject(trainer.id)">+</button>
+		
+				</td>
+			</tr>
+	</table>
+	
+	</div>

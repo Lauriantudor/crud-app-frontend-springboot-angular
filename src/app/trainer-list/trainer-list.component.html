@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-8 offset-md-2">
+	<h2 class="text-center">Traineri</h2>
+	<button class="btn btn-success" (click)="goToAdd()">Adaugă</button>
+	<table class="table table-striped">
+		<thead>
+	
+			<tr>
+				<th>Nume</th>
+				<th>Email</th>
+				<th>Telefon</th>
+				<th>Acțiuni</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let trainer of trainers">
+				<td>{{trainer.name}}</td>
+				<td>{{trainer.email}}</td>
+				<td>{{trainer.phoneNumber}}</td>
+				<td>
+					<button class="btn btn-success btn-update" (click)="goToUpdate(trainer.id)">Modifică</button>
+					<button class="btn btn-info btn-detail" (click)="goToView(trainer.id)">Detalii</button>
+					<button class="btn btn-danger btn-delete" (click)="deleteTrainer(trainer.id)">Șterge</button>
+				</td>
+			</tr>
+	</table>
+	
+	</div>

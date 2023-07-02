@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-8 offset-md-2">
+	<h2 class="text-center">Proiecte</h2>
+	<button class="btn btn-success" (click)="goToAdd()">Adaugă</button>
+	<table class="table table-striped">
+		<thead>
+	
+			<tr>
+				<th>Titlu</th>
+				<th>Locul</th>
+				<th>Organizator</th>
+				<th>Acțiuni</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let project of projects">
+				<td>{{project.title}}</td>
+				<td>{{project.place}}</td>
+				<td class="organizer">{{project.organizer}}</td>
+				<td>
+					<button class="btn btn-success btn-update" (click)="goToUpdate(project.id)">Modifică</button>
+					<button class="btn btn-info btn-detail" (click)="goToView(project.id)">Detalii</button>
+					<button class="btn btn-danger btn-delete" (click)="deleteProject(project.id)">Șterge</button>
+				</td>
+			</tr>
+	</table>
+	
+	</div>

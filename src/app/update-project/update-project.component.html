@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-6 offset-md-3">
+	<h3>Modifică Proiectul</h3>
+<form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm.value)">
+	<div class="form-group">
+		<label>Title</label>
+		<input type="text" class="form-control" id="title"
+		[(ngModel)]="project.title" name="title">
+	</div>
+	<div class="form-group">
+		<label>Descriere:</label>
+		<textarea type="text" class="form-control" id="description"
+		[(ngModel)]="project.description" name="description"></textarea>
+	</div>
+	<div class="form-group">
+		<label>Organizator:</label>
+		<input type="text" class="form-control" id="organizer"
+		[(ngModel)]="project.organizer" name="organizer">
+	</div>
+	<div class="form-group">
+		<label>Perioada:</label>
+		<input type="text" class="form-control" id="period"
+		[(ngModel)]="project.period" name="period">
+	</div>
+	<div class="form-group">
+		<label>Locul:</label>
+		<input type="text" class="form-control" id="place"
+		[(ngModel)]="project.place" name="place">
+	</div>
+	<button class="btn btn-success" type="submit">Modifică</button>
+</form>
+</div>

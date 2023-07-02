@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-6 offset-md-3">
+	<h3>Create a Participant</h3>
+<form #participantForm="ngForm" (ngSubmit)="onSubmit(participantForm.value)">
+	<div class="form-group">
+		<label>Nume</label>
+		<input type="text" class="form-control" id="name"
+		(ngModel)="participant.name" name="name">
+	</div>
+	<div class="form-group">
+		<label>E-mail:</label>
+		<input type="text" class="form-control" id="email"
+		(ngModel)="participant.email" name="email">
+	</div>
+	<div class="form-group">
+		<label>Școala precadenta:</label>
+		<input type="text" class="form-control" id="lastSchool"
+		(ngModel)="participant.lastSchool" name="lastSchool">
+	</div>
+	<div class="form-group">
+		<label>Telefon:</label>
+		<input type="text" class="form-control" id="phoneNumber"
+		(ngModel)="participant.phoneNumber" name="phoneNumber">
+	</div>
+	<button class="btn btn-success" type="submit">Creeaza</button>
+</form>
+</div>

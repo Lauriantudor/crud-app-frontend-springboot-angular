@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="col-md-6 offset-md-3">
+	<h3>Create a Trainer</h3>
+<form #treainerForm="ngForm" (ngSubmit)="onSubmit(treainerForm.value)">
+	<div class="form-group">
+		<label>Nume</label>
+		<input type="text" class="form-control" id="name"
+		(ngModel)="trainer.name" name="name">
+	</div>
+	<div class="form-group">
+		<label>E-mail:</label>
+		<input type="text" class="form-control" id="email"
+		(ngModel)="trainer.email" name="email">
+	</div>
+	<div class="form-group">
+		<label>Instituția:</label>
+		<input type="text" class="form-control" id="istitution"
+		(ngModel)="trainer.institution" name="institution">
+	</div>
+	<div class="form-group">
+		<label>Telefon:</label>
+		<input type="text" class="form-control" id="phoneNumber"
+		(ngModel)="trainer.phoneNumber" name="phoneNumber">
+	</div>
+	<button class="btn btn-success" type="submit">Creeaza</button>
+</form>
+</div>
